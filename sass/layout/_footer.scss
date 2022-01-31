@@ -1,46 +1,50 @@
 .footer {
-  background-color: var(--bacground-color);
+  background-color: $background-color;
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-.foot-container:not(:last-child) {
+.footer__container:not(:last-child) {
   margin-right: 70px;
 }
-.foot-container:last-child {
+.footer__container:last-child {
   margin-left: auto;
 }
 
-.footer .logo {
+.footer__logo {
   margin-right: 0;
   margin-bottom: 20px;
 }
-.address-list {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+
+.footer--accent {
+  color: $primary-color;
 }
-.accent-foot {
-  color: var(--primary-color);
-}
+
 .address {
   font-style: normal;
   display: flex;
 }
+
+.address__list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.address__item:last-child {
+  margin-bottom: 0;
+}
 .address-city {
-  color: var(--primary-color);
+  color: $primary-color;
 }
 .connect .link:focus,
 .connect .link:hover {
   color: #b6b6b6;
-  transition: color var(--transition-cubic);
+  transition: color $transition-cubic;
 }
-.address-item {
+.address__item {
   margin-top: 0;
   margin-bottom: 9px;
-}
-.address-item:last-child {
-  margin-bottom: 0;
 }
 
 /* -----------------------Social------------------------- */
@@ -53,19 +57,19 @@
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
-  color: var(--primary-color);
+  color: $primary-color;
   margin-bottom: 20px;
 }
 
 .footer .social-card-link {
-  color: var(--primary-color);
+  color: $primary-color;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
 .footer .social-card-link:hover,
 .footer .social-card-link:focus {
-  background-color: var(--accent-color);
-  transition: background-color var(--transition-cubic);
+  background-color: $accent-color;
+  transition: background-color $transition-cubic;
 }
 .icon-social {
   fill: currentColor;
@@ -74,7 +78,7 @@
 
 .subscribe-input {
   font-size: 16px;
-  color: var(--primary-color);
+  color: $primary-color;
   min-width: 358px;
   height: 50px;
   padding: 0 15px;
@@ -85,12 +89,12 @@
   outline: none;
   border-radius: 4px;
   background-color: inherit;
-  transition: border-color var(--transition-cubic);
+  transition: border-color $transition-cubic;
 }
 
 .subscribe-input:focus,
 .subscribe-input:hover {
-  border-color: var(--accent-color);
+  border-color: $accent-color;
 }
 
 .subscribe-input::placeholder {

@@ -1,32 +1,32 @@
-.clients-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.clients {
+  background-color: $primary-color;
+}
+
+.clients__item {
+  background-color: $primary-color;
+  flex-basis: calc(100% / 6 - #{$gap});
+}
+
+.clients__link {
+  @include centerFlex();
   height: 92px;
-  border: 1px solid var(--primary-color-icons);
+  border: 1px solid $primary-color-icons;
   border-radius: 4px;
-  transition: border var(--transition-cubic),
+  transition: border $transition-cubic,
     transform 850ms cubic-bezier(0.4, 0, 0.2, 1);
   /* "ЭКСПЕРИМЕНТ! */
+  &:hover,
+  :focus {
+    border: 1px solid $accent-color;
+    transform: scale(1.3);
+  }
+  &:hover > .clients--icon,
+  :focus > .clients--icon {
+    fill: $accent-color;
+  }
 }
 
-.clients-link:hover,
-.clients-link:focus {
-  border: 1px solid var(--accent-color);
-  transform: scale(1.3);
-}
-
-.clients-link:hover > .icon-clients,
-.clients-link:focus > .icon-clients {
-  fill: var(--accent-color);
-}
-
-.clients-item {
-  background-color: var(--primary-color);
-  flex-basis: calc(100% / 6 - var(--card-set-gap));
-}
-
-.icon-clients {
-  fill: var(--primary-color-icons);
-  transition: fill var(--transition-cubic);
+.clients--icon {
+  fill: $primary-color-icons;
+  transition: fill $transition-cubic;
 }
