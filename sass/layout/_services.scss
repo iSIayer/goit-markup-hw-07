@@ -1,17 +1,27 @@
-.services-item {
-  flex-basis: calc(100% / 4 - var(--card-set-gap));
-}
-
-.services-item::before {
-  content: "";
-  display: block;
-  margin-bottom: 30px;
-  background-color: var(--background-precolor);
-  height: 120px;
-  background-size: 70px, 70px;
-  background-repeat: no-repeat;
-  background-position: center;
-  border-radius: 4px;
+.services-section {
+  background-color: $primary-color;
+  &__item {
+    flex-basis: calc(100% / 4 - #{$gap});
+  }
+  &__item::before {
+    content: "";
+    display: block;
+    margin-bottom: 30px;
+    background-color: $background-precolor;
+    height: 120px;
+    background-size: 70px, 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 4px;
+  }
+  &__title {
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $brand-color;
+    margin-bottom: 10px;
+  }
 }
 
 .details-icon::before {
@@ -28,13 +38,4 @@
 
 .technology-icon::before {
   background-image: url(../images/astronaut.svg);
-}
-
-.services-title {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: var(--brand-color);
-  margin-bottom: 10px;
 }

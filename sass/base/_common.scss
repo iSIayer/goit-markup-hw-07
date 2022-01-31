@@ -1,0 +1,65 @@
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.logo {
+  font-family: Raleway;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: $accent-color;
+  display: inline-block;
+}
+
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section-title {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: $brand-color;
+  margin-bottom: 50px;
+}
+
+.item {
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.card-set {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -30px;
+  margin-left: -30px;
+}
+
+.main-button {
+  background-color: $accent-color;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  color: $primary-color;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 0;
+  min-width: 200px;
+  min-height: 50px;
+  justify-content: center;
+  transition: background-color $transition-cubic;
+}
+
+.main-button:hover,
+.main-button:focus {
+  background-color: $accent-precolor;
+}
