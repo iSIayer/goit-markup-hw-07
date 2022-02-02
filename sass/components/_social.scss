@@ -1,10 +1,10 @@
-.social-card__item:not(:last-child) {
-  margin-right: 10px;
-}
-
 .social-card {
   display: flex;
   align-items: center;
+}
+
+.social-card__item:not(:last-child) {
+  margin-right: 10px;
 }
 
 .social-card__link {
@@ -16,14 +16,15 @@
   align-items: center;
   justify-content: center;
   transition: color $transition-cubic, background-color $transition-cubic;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $primary-color;
+  }
 }
 
-.social-card__link:hover,
-.social-card__link:focus {
-  background-color: $accent-color;
-  color: $primary-color;
-}
-
-.social-card__icon {
-  fill: currentColor;
+.social-card__link {
+  .icon {
+    fill: currentColor;
+  }
 }

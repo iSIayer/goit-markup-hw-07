@@ -2,6 +2,25 @@
   background-color: $background-color;
   padding-top: 60px;
   padding-bottom: 60px;
+  &__logo {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  &--accent {
+    color: $primary-color;
+  }
+  &__title {
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    color: $primary-color;
+    margin-bottom: 20px;
+  }
+}
+
+.footer > .container {
+  display: flex;
+  align-items: baseline;
 }
 
 .footer__container:not(:last-child) {
@@ -10,73 +29,53 @@
 .footer__container:last-child {
   margin-left: auto;
 }
-
-.footer__logo {
-  margin-right: 0;
-  margin-bottom: 20px;
-}
-
-.footer--accent {
-  color: $primary-color;
-}
-
+// --------------------ADDRESS CONTAINER-------------------
 .address {
   font-style: normal;
-  display: flex;
-}
-
-.address__list {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  &__list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+  &__item {
+    margin-top: 0;
+    margin-bottom: 9px;
+  }
+  &--city {
+    color: $primary-color;
+  }
+  &--link:focus {
+    color: #b6b6b6;
+    transition: color $transition-cubic;
+  }
+  &--link:hover {
+    color: #b6b6b6;
+    transition: color $transition-cubic;
+  }
 }
 
 .address__item:last-child {
   margin-bottom: 0;
 }
-.address-city {
-  color: $primary-color;
-}
-.connect .link:focus,
-.connect .link:hover {
-  color: #b6b6b6;
-  transition: color $transition-cubic;
-}
-.address__item {
-  margin-top: 0;
-  margin-bottom: 9px;
-}
+// -----------------------SOCIAL CONTAINER----------------------
 
-/* -----------------------Social------------------------- */
-.footer > .container {
-  display: flex;
-  align-items: baseline;
-}
-
-.footer-title {
-  font-size: 14px;
-  line-height: 1.14;
-  text-transform: uppercase;
-  color: $primary-color;
-  margin-bottom: 20px;
-}
-
-.footer .social-card-link {
+.footer .social-card__link {
   color: $primary-color;
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.footer .social-card-link:hover,
-.footer .social-card-link:focus {
+.footer .social-card__link:hover,
+.footer .social-card__link:focus {
   background-color: $accent-color;
   transition: background-color $transition-cubic;
 }
-.icon-social {
+.social-card__icon {
   fill: currentColor;
 }
-/* ----------------------Subsribe-footer--------------------- */
 
-.subscribe-input {
+//---------------------SUBSCRIBE CONTAINER-------------------------
+
+.subscribe__input {
   font-size: 16px;
   color: $primary-color;
   min-width: 358px;
@@ -90,25 +89,24 @@
   border-radius: 4px;
   background-color: inherit;
   transition: border-color $transition-cubic;
+  &:focus,
+  &:hover {
+    border-color: $accent-color;
+  }
+  &::placeholder {
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
-.subscribe-input:focus,
-.subscribe-input:hover {
-  border-color: $accent-color;
-}
-
-.subscribe-input::placeholder {
-  padding: 0;
-  font-size: 16px;
-  line-height: 1.25;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.subscribe-button {
+.subscribe__button {
   display: inline-flex;
   align-items: center;
+  @extend %main-button;
 }
-.icon-button {
+.subscribe--icon {
   margin-left: 10px;
 }

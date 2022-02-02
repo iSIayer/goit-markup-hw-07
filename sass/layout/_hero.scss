@@ -24,4 +24,7 @@
     color: $primary-color;
     margin-bottom: 30px;
   }
+  &__button {
+    @extend %main-button;
+  }
 }

@@ -35,6 +35,11 @@
   padding: 32px 0;
   position: relative;
   transition: color $transition-cubic;
+  &:focus,
+  &:hover,
+  &--current {
+    color: $accent-color;
+  }
 }
 .header__link--align {
   align-items: center;
@@ -50,23 +55,17 @@
   left: 0;
   transition: transform $transition-cubic;
 }
-.header__connect > .header__item:nth-child(1) {
-  margin-right: 30px;
-}
 
 .header__connect {
   display: flex;
   justify-content: space-between;
   margin-left: auto;
+  &-icon {
+    margin-right: 10px;
+    fill: currentColor;
+  }
 }
 
-.header__connect-icon {
-  margin-right: 10px;
-  fill: currentColor;
-}
-
-.header__link:focus,
-.header__link:hover,
-.header__link--current {
-  color: $accent-color;
+.header__connect > .header__item:nth-child(1) {
+  margin-right: 30px;
 }

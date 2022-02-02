@@ -41,24 +41,3 @@
   margin-top: -30px;
   margin-left: -30px;
 }
-
-.main-button {
-  background-color: $accent-color;
-  font-family: inherit;
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
-  color: $primary-color;
-  border-radius: 4px;
-  padding: 10px 0;
-  min-width: 200px;
-  min-height: 50px;
-  justify-content: center;
-  transition: background-color $transition-cubic;
-}
-
-.main-button:hover,
-.main-button:focus {
-  background-color: $accent-precolor;
-}
