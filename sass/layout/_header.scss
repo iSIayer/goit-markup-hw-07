@@ -24,7 +24,7 @@
   color: $brand-color;
   display: flex;
 }
-.header__item:not(:last-child) {
+.header__nav .header__item:not(:last-child) {
   margin-right: 50px;
 }
 .header__link {
@@ -64,8 +64,7 @@
     margin-right: 10px;
     fill: currentColor;
   }
-}
-
-.header__connect > .header__item:nth-child(1) {
-  margin-right: 30px;
+  & .header__item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
