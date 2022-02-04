@@ -18,6 +18,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <script  src='/js/sort.js'></script>
+
     <title>Portfolio</title>
   </head>
   <body>
@@ -77,26 +79,26 @@
         <div class="container">
           <ul class="btn-list">
             <li class="btn-list__item">
-              <button class="btn-list__link active" type="button">Все</button>
+              <button class="btn-list__link active" data-group="all" type="button">Все</button>
             </li>
             <li class="btn-list__item">
-              <button class="btn-list__link" type="button">Веб-сайты</button>
+              <button class="btn-list__link" data-group="website" type="button">Веб-сайты</button>
             </li>
             <li class="btn-list__item">
-              <button class="btn-list__link" type="button">Приложения</button>
+              <button class="btn-list__link" data-group="app" type="button">Приложения</button>
             </li>
             <li class="btn-list__item">
-              <button class="btn-list__link" type="button">Дизайн</button>
+              <button class="btn-list__link" data-group="design" type="button">Дизайн</button>
             </li>
             <li class="btn-list__item">
-              <button class="btn-list__link" type="button">Маркетинг</button>
+              <button class="btn-list__link" data-group="marketing" type="button">Маркетинг</button>
             </li>
           </ul>
 
           <!-- ==========================CONTAINER CARDS============================== -->
 
-          <ul class="card-set">
-            <li class="item pf-card">
+          <ul id="cards_container" class="card-set">
+            <li data-group="website" class="item pf-card">
               <a
                 class="pf-card__link"
                 href=""
@@ -125,7 +127,7 @@
                 </div>
               </a>
             </li>
-            <li class="item pf-card">
+            <li data-group="design" class="item pf-card">
               <a
                 class="pf-card__link"
                 href=""
@@ -156,7 +158,7 @@
                 </div>
               </a>
             </li>
-            <li class="item pf-card">
+            <li data-group="app" class="item pf-card">
               <a
                 class="pf-card__link"
                 href=""
@@ -186,7 +188,7 @@
                 </div>
               </a>
             </li>
-            <li class="item pf-card">
+            <li data-group="marketing" class="item pf-card">
               <a
                 class="pf-card__link"
                 href=""
@@ -216,7 +218,7 @@
                 </div>
               </a>
             </li>
-            <li class="item pf-card">
+            <li data-group="app" class="item pf-card">
               <a
                 class="pf-card__link"
                 href=""
@@ -246,7 +248,7 @@
                 </div>
               </a>
             </li>
-            <li class="item pf-card">
+            <li data-group="website" class="item pf-card">
               <a
                 class="pf-card__link"
                 href=""
@@ -276,7 +278,7 @@
                 </div>
               </a>
             </li>
-            <li class="item pf-card">
+            <li data-group="design" class="item pf-card">
               <a
                 class="pf-card__link"
                 href=""
@@ -306,7 +308,7 @@
                 </div>
               </a>
             </li>
-            <li class="item pf-card">
+            <li data-group="marketing" class="item pf-card">
               <a
                 class="pf-card__link"
                 href=""
@@ -336,7 +338,7 @@
                 </div>
               </a>
             </li>
-            <li class="item pf-card">
+            <li data-group="app" class="item pf-card">
               <a
                 class="pf-card__link"
                 href=""
